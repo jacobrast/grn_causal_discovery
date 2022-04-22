@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 import networkx as nx
 import cdt
-import pdb
 import matplotlib.pyplot as plt
 import argparse
 
@@ -65,8 +64,6 @@ graph_nx = nx.from_numpy_array(graph, create_using=nx.DiGraph)
 
 score = cdt.metrics.precision_recall(gold_nx, graph_nx)[0]
 print(score)
-
-pdb.set_trace()
 
 #nx.draw_networkx(G, arrows=True)
 #plt.show()
