@@ -111,6 +111,7 @@ class TopoDiffVAE(nn.Module):
         )
         self.f_var.apply(init_weights)
 
+
         self.dec = nn.Sequential(
             #nn.Linear(int(graph_size * (graph_size) / 2) + n_latent, int(graph_size * (graph_size - 1)*2/3)),
             nn.Linear(TF * graph_size + n_latent, int(TF * graph_size * 3/2)),
